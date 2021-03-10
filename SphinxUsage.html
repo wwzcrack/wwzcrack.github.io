@@ -70,37 +70,35 @@
 <div class="section" id="id2">
 <h2>环境准备<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>实验环境</p>
-<blockquote>
-<div><p>python3.9.2,windows,vscode</p>
-</div></blockquote>
+<div class="highlight-reST notranslate"><div class="highlight"><pre><span></span>python3.9.2,windows,vscode
+</pre></div>
+</div>
 <p>安装</p>
-<blockquote>
-<div><p>pip install sphinx</p>
-</div></blockquote>
+<div class="highlight-reST notranslate"><div class="highlight"><pre><span></span>pip install sphinx
+</pre></div>
+</div>
 </div>
 <div class="section" id="id3">
 <h2>搭建工程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id4">
 <h3>1.快速创建项目<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>创建目录testHtml,进入目录，进入当前目录的cmd(这里建议安装cmd的替代工具pwsh),执行</p>
-<blockquote>
-<div><p>sphinx-quickstart</p>
-</div></blockquote>
+<div class="highlight-reST notranslate"><div class="highlight"><pre><span></span>sphinx-quickstart
+</pre></div>
+</div>
 <p>得到如下的输出：</p>
-<div class="figure align-center" id="id11">
-<a class="reference internal image-reference" href="_images/quickstartResult.PNG"><img alt="An adorable ginger cat." src="_images/quickstartResult.PNG" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-text">这里需要输入是否将源码和编译文件分开存储，需要输入项目名称，最后zh_CN 表示本项目为中文</span><a class="headerlink" href="#id11" title="永久链接至图片">¶</a></p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/quickstartResult.PNG"><img alt="An adorable ginger cat." src="_images/quickstartResult.PNG" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">这里需要输入是否将源码和编译文件分开存储，需要输入项目名称，最后zh_CN 表示本项目为中文</span><a class="headerlink" href="#id12" title="永久链接至图片">¶</a></p>
 </div>
 <p>在命令行输入</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>make html 得到对应的html</p></li>
-<li><p>make clean html 清除对应的html</p></li>
-</ul>
-</div></blockquote>
+<div class="highlight-reST notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> make html 得到对应的html
+<span class="m">-</span> make clean html 清除对应的html
+</pre></div>
+</div>
 <p>进入build,html 目录双击index.html 得到如下结果</p>
 <div class="figure align-center">
-<a class="reference internal image-reference" href="_images/testindex.PNG"><img alt="An adorable ginger cat." src="_images/testindex.PNG" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/testindex.PNG"><img alt="An adorable ginger cat." src="_images/testindex.PNG" style="width: 100%;" /></a>
 </div>
 </div>
 <div class="section" id="id5">
@@ -119,49 +117,54 @@
 </div>
 <div class="section" id="id9">
 <h4>2.3<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
-<p>更改source目录下的conf.py</p>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">修改扩展</span><a class="headerlink" href="#id10" title="永久链接至代码">¶</a></div>
-<div class="highlight-python3 notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
-     <span class="s2">&quot;sphinx.ext.intersphinx&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;sphinx.ext.mathjax&quot;</span><span class="p">,</span>
-     <span class="s2">&quot;sphinx.ext.viewcode&quot;</span><span class="p">,</span>
-     <span class="s1">&#39;sphinx.ext.githubpages&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;recommonmark&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;sphinx_markdown_tables&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;sphinxemoji.sphinxemoji&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;sphinx.ext.imgmath&#39;</span><span class="p">,</span>
- <span class="p">]</span>
-
- <span class="c1"># html_theme = &#39;alabaster&#39;</span>
- <span class="kn">import</span> <span class="nn">oe_sphinx_theme</span>
- <span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;oe_sphinx&quot;</span>
- <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">oe_sphinx_theme</span><span class="o">.</span><span class="n">get_theme_dir</span><span class="p">()]</span>
+<p>更改source目录下的conf.py对应的内容为如下数据</p>
+<div class="highlight-reST notranslate"><div class="highlight"><pre><span></span>extensions =[
+&quot;sphinx.ext.intersphinx&quot;,
+&quot;sphinx.ext.autodoc&quot;,
+&quot;sphinx.ext.mathjax&quot;,
+&quot;sphinx.ext.viewcode&quot;,
+&#39;sphinx.ext.githubpages&#39;,
+&#39;recommonmark&#39;,
+&#39;sphinx_markdown_tables&#39;,
+&#39;sphinxemoji.sphinxemoji&#39;,
+&#39;sphinx.ext.imgmath&#39;,
+]
+# html_theme = &#39;alabaster&#39;
+import oe_sphinx_theme
+html_theme = &quot;oe_sphinx&quot;
+html_theme_path = [oe_sphinx_theme.get_theme_dir()]
 </pre></div>
-</td></tr></table></div>
 </div>
-<p>2.4 得到结果如下：</p>
+</div>
+<div class="section" id="id10">
+<h4>2.4 得到结果如下：<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="_images/newtestindex.PNG"><img alt="An adorable ginger cat." src="_images/newtestindex.PNG" style="width: 80%;" /></a>
 </div>
 <p>重新make 得到网页静态代码</p>
 </div>
+</div>
+<div class="section" id="github">
+<h3>3. github配置<a class="headerlink" href="#github" title="永久链接至标题">¶</a></h3>
+<div class="section" id="name-github-io">
+<h4>3.1 直接同步到name.github.io<a class="headerlink" href="#name-github-io" title="永久链接至标题">¶</a></h4>
+<p>创建和github帐号同名的name.github.io</p>
+<p>将当前github项目同步到本地，然后将build/html/ 目录下的内容拷贝到当前文件夹，然后再github同步一下就可以了。在浏览器输入name.github.io 就能看到对应的网页了</p>
+</div>
+</div>
+<div class="section" id="rst">
+<h3>4. rst 语法学习参考链接<a class="headerlink" href="#rst" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://self-contained.github.io/reStructuredText/Fundamentals.html#id6">https://self-contained.github.io/reStructuredText/Fundamentals.html#id6</a></p></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>5. 参考链接<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://blog.csdn.net/u013716535/article/details/104902308">https://blog.csdn.net/u013716535/article/details/104902308</a></p></li>
+<li><p><a class="reference external" href="https://blog.csdn.net/u013716535/article/details/104907240">https://blog.csdn.net/u013716535/article/details/104907240</a></p></li>
+<li><p><a class="reference external" href="https://www.cnblogs.com/tsanfer/p/12456317.html">https://www.cnblogs.com/tsanfer/p/12456317.html</a></p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -184,8 +187,15 @@
 <li><a class="reference internal" href="#id6">2.1</a></li>
 <li><a class="reference internal" href="#id8">2.2</a></li>
 <li><a class="reference internal" href="#id9">2.3</a></li>
+<li><a class="reference internal" href="#id10">2.4 得到结果如下：</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#github">3. github配置</a><ul>
+<li><a class="reference internal" href="#name-github-io">3.1 直接同步到name.github.io</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rst">4. rst 语法学习参考链接</a></li>
+<li><a class="reference internal" href="#id11">5. 参考链接</a></li>
 </ul>
 </li>
 </ul>
