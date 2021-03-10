@@ -1,0 +1,22 @@
+.. PersonalHomePage documentation master file, created by
+   sphinx-quickstart on Sun Feb  7 22:07:29 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+#########################
+欢迎来到张维维的个人主页
+#########################
+
+爱生活，爱自己
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 目录:
+
+   HOME
+   随笔
+
+
+
+
