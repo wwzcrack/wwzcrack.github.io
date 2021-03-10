@@ -87,9 +87,9 @@
 </pre></div>
 </div>
 <p>得到如下的输出：</p>
-<div class="figure align-center" id="id12">
+<div class="figure align-center" id="id13">
 <a class="reference internal image-reference" href="_images/quickstartResult.PNG"><img alt="An adorable ginger cat." src="_images/quickstartResult.PNG" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-text">这里需要输入是否将源码和编译文件分开存储，需要输入项目名称，最后zh_CN 表示本项目为中文</span><a class="headerlink" href="#id12" title="永久链接至图片">¶</a></p>
+<p class="caption"><span class="caption-text">这里需要输入是否将源码和编译文件分开存储，需要输入项目名称，最后zh_CN 表示本项目为中文</span><a class="headerlink" href="#id13" title="永久链接至图片">¶</a></p>
 </div>
 <p>在命令行输入</p>
 <div class="highlight-reST notranslate"><div class="highlight"><pre><span></span><span class="m">-</span> make html 得到对应的html
@@ -137,7 +137,8 @@ html_theme_path = [oe_sphinx_theme.get_theme_dir()]
 </div>
 </div>
 <div class="section" id="id10">
-<h4>2.4 得到结果如下：<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
+<h4>2.4<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h4>
+<p>得到结果如下：</p>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="_images/newtestindex.PNG"><img alt="An adorable ginger cat." src="_images/newtestindex.PNG" style="width: 80%;" /></a>
 </div>
@@ -151,6 +152,18 @@ html_theme_path = [oe_sphinx_theme.get_theme_dir()]
 <p>创建和github帐号同名的name.github.io</p>
 <p>将当前github项目同步到本地，然后将build/html/ 目录下的内容拷贝到当前文件夹，然后再github同步一下就可以了。在浏览器输入name.github.io 就能看到对应的网页了</p>
 </div>
+<div class="section" id="id11">
+<h4>3.2 创建新仓库<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h4>
+<p>步骤</p>
+<div class="highlight-reST notranslate"><div class="highlight"><pre><span></span><span class="m">1.</span> 在name 账户下创建新的仓库testHtml
+<span class="m">2.</span> 在testHtml下创建分支gh-pages
+    创建gh-pages分支
+    git checkout --orphan gh-pages
+    这里会切换到ph-pages 分支下
+<span class="m">3.</span> 将html数据同步到gh_pages里面。可以通过在浏览器输入name.github.io/testHtml访问。
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="rst">
 <h3>4. rst 语法学习参考链接<a class="headerlink" href="#rst" title="永久链接至标题">¶</a></h3>
@@ -158,8 +171,8 @@ html_theme_path = [oe_sphinx_theme.get_theme_dir()]
 <li><p><a class="reference external" href="https://self-contained.github.io/reStructuredText/Fundamentals.html#id6">https://self-contained.github.io/reStructuredText/Fundamentals.html#id6</a></p></li>
 </ul>
 </div>
-<div class="section" id="id11">
-<h3>5. 参考链接<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id12">
+<h3>5. 参考链接<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://blog.csdn.net/u013716535/article/details/104902308">https://blog.csdn.net/u013716535/article/details/104902308</a></p></li>
 <li><p><a class="reference external" href="https://blog.csdn.net/u013716535/article/details/104907240">https://blog.csdn.net/u013716535/article/details/104907240</a></p></li>
@@ -187,15 +200,16 @@ html_theme_path = [oe_sphinx_theme.get_theme_dir()]
 <li><a class="reference internal" href="#id6">2.1</a></li>
 <li><a class="reference internal" href="#id8">2.2</a></li>
 <li><a class="reference internal" href="#id9">2.3</a></li>
-<li><a class="reference internal" href="#id10">2.4 得到结果如下：</a></li>
+<li><a class="reference internal" href="#id10">2.4</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#github">3. github配置</a><ul>
 <li><a class="reference internal" href="#name-github-io">3.1 直接同步到name.github.io</a></li>
+<li><a class="reference internal" href="#id11">3.2 创建新仓库</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#rst">4. rst 语法学习参考链接</a></li>
-<li><a class="reference internal" href="#id11">5. 参考链接</a></li>
+<li><a class="reference internal" href="#id12">5. 参考链接</a></li>
 </ul>
 </li>
 </ul>

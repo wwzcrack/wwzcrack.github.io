@@ -97,8 +97,10 @@ vscode配置参考这个 `链接 <https://ebf-contribute-guide.readthedocs.io/zh
 
 
 
-2.4 得到结果如下：
-^^^^^^^^^^^^^^^^^^
+2.4 
+^^^^
+
+得到结果如下：
 
 .. figure:: newtestindex.PNG
     :width: 80%
@@ -118,6 +120,20 @@ vscode配置参考这个 `链接 <https://ebf-contribute-guide.readthedocs.io/zh
 创建和github帐号同名的name.github.io 
 
 将当前github项目同步到本地，然后将build/html/ 目录下的内容拷贝到当前文件夹，然后再github同步一下就可以了。在浏览器输入name.github.io 就能看到对应的网页了
+
+3.2 创建新仓库
+^^^^^^^^^^^^^^
+
+步骤
+
+.. code-block:: reST
+
+    1. 在name 账户下创建新的仓库testHtml
+    2. 在testHtml下创建分支gh-pages
+        创建gh-pages分支
+        git checkout --orphan gh-pages 
+        这里会切换到ph-pages 分支下
+    3. 将html数据同步到gh_pages里面。可以通过在浏览器输入name.github.io/testHtml访问。
 
 4. rst 语法学习参考链接
 ------------------------
