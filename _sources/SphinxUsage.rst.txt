@@ -1,0 +1,103 @@
+===================================
+如何用sphinx结合github搭建静态blog
+===================================
+
+这篇blog主要介绍如何通过sphinx结合github搭建简单的静态blog, 方便日常的笔记记录,这里推荐用vscode来编辑sphinx代码
+
+vscode配置参考这个 `链接 <https://ebf-contribute-guide.readthedocs.io/zh_CN/latest/install-sphinx-env/vscode.html>`_.
+
+环境准备
+~~~~~~~~~
+
+实验环境
+
+    python3.9.2,windows,vscode
+
+安装
+    
+    pip install sphinx
+
+搭建工程
+~~~~~~~~
+
+1.快速创建项目
+---------------
+
+创建目录testHtml,进入目录，进入当前目录的cmd(这里建议安装cmd的替代工具pwsh),执行
+    
+    sphinx-quickstart
+
+得到如下的输出：
+
+.. figure:: quickstartResult.PNG
+    :width: 80%
+    :alt: An adorable ginger cat.
+    :align: center
+ 
+
+    这里需要输入是否将源码和编译文件分开存储，需要输入项目名称，最后zh_CN 表示本项目为中文
+
+在命令行输入
+
+    - make html 得到对应的html 
+    - make clean html 清除对应的html
+  
+进入build,html 目录双击index.html 得到如下结果
+
+.. figure:: testindex.PNG
+    :width: 80%
+    :alt: An adorable ginger cat.
+    :align: center
+
+
+2. 更改主题
+------------
+
+2.1
+^^^^^
+
+`在这 <https://sphinx-themes.org/>`_ 选择自己喜欢的主题  
+
+这里选择的是：oe_sphinx_theme  
+
+2.2
+^^^^
+添加主题
+    pip install oe_sphinx_theme  
+
+2.3
+^^^^
+更改source目录下的conf.py
+
+
+.. code-block:: python3
+   :linenos:
+   :caption: 修改扩展
+   :name: 
+
+    extensions = [
+        "sphinx.ext.intersphinx",
+        "sphinx.ext.autodoc",
+        "sphinx.ext.mathjax",
+        "sphinx.ext.viewcode",
+        'sphinx.ext.githubpages',
+        'recommonmark',
+        'sphinx_markdown_tables',
+        'sphinxemoji.sphinxemoji',
+        'sphinx.ext.imgmath',
+    ]
+ 
+    # html_theme = 'alabaster'
+    import oe_sphinx_theme
+    html_theme = "oe_sphinx"
+    html_theme_path = [oe_sphinx_theme.get_theme_dir()]
+
+
+2.4 得到结果如下：
+
+.. figure:: newtestindex.PNG
+    :width: 80%
+    :alt: An adorable ginger cat.
+    :align: center
+
+重新make 得到网页静态代码

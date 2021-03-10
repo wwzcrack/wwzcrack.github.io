@@ -1,0 +1,249 @@
+<!doctype html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>如何用sphinx结合github搭建静态blog &#8212; HomePage v.0.1 文档</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/app.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="随笔" href="%E9%9A%8F%E7%AC%94.html" />
+ 
+<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+<!-- container -->
+<div class="container">
+  <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/5499d8dc0848446e91022c6dba9db343?mtime=1421237274"></script>
+  <!-- header -->
+
+  <!-- embed -->
+  <div class="temp-embed"></div>
+
+  <!-- large header bg image -->
+  <div class="bgimage"></div>
+
+  <!-- wrapper & responsive navigation -->
+  <div class="wrapper clearfix">
+    <div class="main-navigation-inner clearfix inner">
+
+
+
+      <!-- logo -->
+      <div class="logo-block">
+        <div class="logo-block-inner">
+          <a href="index.html">
+            <img src="_static/img/pyoes/OE-vlaanderen-logo.png" width="65">
+            <h2>Vlaanderen</h2>
+            <h4>is Erfgoed</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-border"></div>
+  <div class="row">
+    <div class="large-9 columns">
+      <h3>HomePage</h3>
+    </div>
+  </div>
+
+  <!-- end header -->
+  <div class="row">
+    
+    <div class="large-9 columns">
+      <div class="body panel" role="main">
+        
+  <div class="section" id="sphinxgithubblog">
+<h1>如何用sphinx结合github搭建静态blog<a class="headerlink" href="#sphinxgithubblog" title="永久链接至标题">¶</a></h1>
+<p>这篇blog主要介绍如何通过sphinx结合github搭建简单的静态blog, 方便日常的笔记记录,这里推荐用vscode来编辑sphinx代码</p>
+<p>vscode配置参考这个 <a class="reference external" href="https://ebf-contribute-guide.readthedocs.io/zh_CN/latest/install-sphinx-env/vscode.html">链接</a>.</p>
+<div class="section" id="id2">
+<h2>环境准备<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>实验环境</p>
+<blockquote>
+<div><p>python3.9.2,windows,vscode</p>
+</div></blockquote>
+<p>安装</p>
+<blockquote>
+<div><p>pip install sphinx</p>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>搭建工程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h3>1.快速创建项目<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>创建目录testHtml,进入目录，进入当前目录的cmd(这里建议安装cmd的替代工具pwsh),执行</p>
+<blockquote>
+<div><p>sphinx-quickstart</p>
+</div></blockquote>
+<p>得到如下的输出：</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/quickstartResult.PNG"><img alt="An adorable ginger cat." src="_images/quickstartResult.PNG" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text">这里需要输入是否将源码和编译文件分开存储，需要输入项目名称，最后zh_CN 表示本项目为中文</span><a class="headerlink" href="#id11" title="永久链接至图片">¶</a></p>
+</div>
+<p>在命令行输入</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>make html 得到对应的html</p></li>
+<li><p>make clean html 清除对应的html</p></li>
+</ul>
+</div></blockquote>
+<p>进入build,html 目录双击index.html 得到如下结果</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/testindex.PNG"><img alt="An adorable ginger cat." src="_images/testindex.PNG" style="width: 80%;" /></a>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>2. 更改主题<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id6">
+<h4>2.1<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
+<p><a class="reference external" href="https://sphinx-themes.org/">在这</a> 选择自己喜欢的主题</p>
+<p>这里选择的是：oe_sphinx_theme</p>
+</div>
+<div class="section" id="id8">
+<h4>2.2<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
+<dl class="simple">
+<dt>添加主题</dt><dd><p>pip install oe_sphinx_theme</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id9">
+<h4>2.3<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h4>
+<p>更改source目录下的conf.py</p>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">修改扩展</span><a class="headerlink" href="#id10" title="永久链接至代码">¶</a></div>
+<div class="highlight-python3 notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+     <span class="s2">&quot;sphinx.ext.intersphinx&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;sphinx.ext.autodoc&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;sphinx.ext.mathjax&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;sphinx.ext.viewcode&quot;</span><span class="p">,</span>
+     <span class="s1">&#39;sphinx.ext.githubpages&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;recommonmark&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;sphinx_markdown_tables&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;sphinxemoji.sphinxemoji&#39;</span><span class="p">,</span>
+     <span class="s1">&#39;sphinx.ext.imgmath&#39;</span><span class="p">,</span>
+ <span class="p">]</span>
+
+ <span class="c1"># html_theme = &#39;alabaster&#39;</span>
+ <span class="kn">import</span> <span class="nn">oe_sphinx_theme</span>
+ <span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;oe_sphinx&quot;</span>
+ <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">oe_sphinx_theme</span><span class="o">.</span><span class="n">get_theme_dir</span><span class="p">()]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>2.4 得到结果如下：</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/newtestindex.PNG"><img alt="An adorable ginger cat." src="_images/newtestindex.PNG" style="width: 80%;" /></a>
+</div>
+<p>重新make 得到网页静态代码</p>
+</div>
+</div>
+</div>
+</div>
+
+
+      </div>
+    </div>
+    <div class="large-3 columns">
+      
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div class="panel">
+  <h4><a href="index.html">Inhoud</a></h4>
+  <ul>
+<li><a class="reference internal" href="#">如何用sphinx结合github搭建静态blog</a><ul>
+<li><a class="reference internal" href="#id2">环境准备</a></li>
+<li><a class="reference internal" href="#id3">搭建工程</a><ul>
+<li><a class="reference internal" href="#id4">1.快速创建项目</a></li>
+<li><a class="reference internal" href="#id5">2. 更改主题</a><ul>
+<li><a class="reference internal" href="#id6">2.1</a></li>
+<li><a class="reference internal" href="#id8">2.2</a></li>
+<li><a class="reference internal" href="#id9">2.3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<div class="panel">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="%E9%9A%8F%E7%AC%94.html"
+                        title="上一章">随笔</a></p>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/SphinxUsage.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<form action="search.html" method="get">
+ <div class="panel fl-block-search">
+  <div class="form-group">
+   <input type="text" name="q" class="form-control" placeholder="Trefwoord ..." />
+  </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+
+  <div class="btn-group-justified">
+   <div class="btn-group">
+    <button type="submit" class="button expand" style="font-size:11px">Zoeken</button>
+   </div>
+  </div>
+ </div>
+</form>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="push"></div>
+</div> <!-- end container -->
+<!-- footer -->
+<div id="footerContainer">
+  <footer id="footer-bottom" role="contentinfo">
+    <div class="footer-bottom-inner inner">
+      <p class="copyright">
+        &#169; 版权所有 2021, 张维维.
+        由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3 创建。
+      </p>
+      <p class="pull-right">
+        <a href="#">Terug naar boven</a>
+      </p>
+    </div>
+  </footer>
+  <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/79a9f632dc8e45aa884f7924ee16f7bf?mtime=1421237274"></script>
+</div>
+<!-- end footer -->
+<script src="_static/bower_components/foundation/js/foundation.min.js"></script>
+<script src="_static/js/app.js"></script>
+  </body>
+</html>
