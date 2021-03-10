@@ -1,0 +1,24 @@
+.. defeatBinary documentation master file, created by
+   sphinx-quickstart on Mon Feb  8 10:31:39 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+##############################
+defeat binary  clone detector
+##############################
+
+本文主要是 defeat binary clone detector 论文的个人博客，主要记录在整个论文周期中的一些学习笔记，暂时不对外开放。
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 目录
+
+   survey
+   OpenToolConf/ToolConfiguration
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`
